@@ -1,0 +1,108 @@
+ <!DOCTYPE html>
+ <html lang="en">
+
+ <head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Register to VARS</title>
+   <link rel="icon" type="image/png" href="/static/images/favicon2.png">
+   <!--    Google fonts-->
+   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,900|Ubuntu:400,700&display=swap" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <!--    Bootstrap css files-->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <!--    Custom css files-->
+   <link rel="stylesheet" href="/static/content/logincss.css">
+
+   <!--    Font Awesome-->
+   <script src="https://kit.fontawesome.com/a769059ecb.js" crossorigin="anonymous"></script>
+   <!--    Bootstrap js files-->
+   <script defer src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+   <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+ </head>
+
+ <body>
+   <div class="container-fluid">
+     <div class="row">
+       <div class="col-7 sectionsign1 bottom">
+         <div class="form-box">
+           <div class="brand">
+             <div class="brand-logo">
+               <a href="{{ url_for('home') }}"><img src="/static/images/favicon2.png" alt="VARS-logo" class="logo"></a>
+             </div>
+           </div>
+           <h2 class="form-title">Create new account</h2>
+           <div class="social">
+             <div class="enc-dec">
+               <button class="btn btn-outline-dark btn-md facebook-button" type="button"><img src="/static/images/facebook.png" alt="google-logo" class="loginImages"> Sign up with Facebook</button>
+               <button class="btn btn-outline-dark btn-md download-button" type="button"><img src="/static/images/google-image.png" alt="google-logo" class="loginImages"> Sign up with Google</button>
+             </div>
+
+           </div>
+           <form class="loginForm" action="{{ url_for('signup') }}" method="post">
+
+             {% if mesage is defined and mesage %}
+             <div class="alert alert-warning">{{ mesage }}</div>
+             {% endif %}
+
+             <div class="form_group">
+               <div class="field-Name">
+                 <div class="input-icon input-name">
+                   <input type="text" id="signupName" class="input" name="name" required placeholder="Enter your name" autofocus="true">
+                 </div>
+               </div>
+             </div>
+             <div class="form_group">
+               <div class="field-signupEmail">
+                 <div class="input-icon input-email">
+                   <input type="text" id="signupEmail" class="input" name="email" required placeholder="Enter your Email" autofocus="true">
+                 </div>
+               </div>
+             </div>
+             <div class="form_group">
+               <div class="field-inputPassword">
+                 <div class="input-icon input-pwd">
+                   <input type="password" id="inputPasswordAuth" class="input" name="password" required placeholder="Enter your Password" autofocus="true">
+                 </div>
+               </div>
+             </div>
+             <div class="form_group">
+               <div class="field-inputPassword">
+                 <div class="input-icon input-pwd">
+                   <input type="password" id="inputCPasswordAuth" class="input" name="cpassword" required placeholder="Confirm Password" autofocus="true">
+                 </div>
+               </div>
+             </div>
+
+             <div class="forget-password">
+               <p>
+                 <a href="#" id="forget-password">Forgot your Password?</a>
+               </p>
+             </div>
+             <div class="form-action">
+               <button type="submit" class="btn btn-lg btn-outline-dark">Sign In</button>
+             </div>
+             <div class="login-account">
+               <p>Already member? <a href="{{ url_for('login') }}" id="goLogin">Log In</a></p>
+             </div>
+           </form>
+         </div>
+       </div>
+       <div class="col-5 sectionsign2">
+         <div class="info-section">
+           <div class="image-box">
+             <img src="/static/images/im.png" class="info-image" alt="VARS">
+             <h1>Image Encryption/Decryption tool</h1>
+             <p>VARS helps you encrypt/decrypt image files quickly and easily. Start securing your images from now onwards.</p>
+           </div>
+         </div>
+       </div>
+
+       <footer class="footersign">
+         <p class="copyright">© Copyright 2022 VARS</p>
+       </footer>
+ </body>
+
+ </html>

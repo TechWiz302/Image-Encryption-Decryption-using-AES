@@ -1,0 +1,49 @@
+body{
+  background-color: #fff;
+  font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+.section1{
+  background-color: #fff;
+  padding: 10rem 3.5rem 10rem ;
+}
+
+.section2{
+  background-color: #F5F5F5;
+  padding: 10rem 3.5rem 10rem;
+}
+
+.logo{
+  height: 150px;
+  width: 150px;
+}
+
+h1,h2,h3 {
+  color: 	#383838;
+  font-family: inherit;
+}
+
+.loginImages{
+  height: 30px;
+  width: 30px;
+}
+
+.btn{
+  margin: 10px 5px 15px;
+}
+
+.input-email{
+  padding: 0 0 0.2rem 0;
+}
+
+.input{
+  padding: 12px 16rem 12px 20px;
+  margin: 8px 0;
+  border-radius: 25px;
+  border: 2px solid grey;
+}
+
+.info-image{
+  padding: 0 0 10px 0;
+}
